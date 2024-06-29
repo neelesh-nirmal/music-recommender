@@ -10,7 +10,7 @@ class Playlist:
         self.__name: str = name
 
         self.__songs: dict[str, Song] = {}
-        if not songs:
+        if songs:
             self.__songs = {song.name: song for song in songs}
 
         logger.info(f"Playlist {self.__name} created with {len(songs)} songs")

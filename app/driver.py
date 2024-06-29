@@ -9,6 +9,7 @@ from app.strategy.basic_recommender import BasicRecommenderStrategy
 from app.strategy.friends_playlist_based_recommender import FriendsPlaylistBasedRecommenderStrategy
 
 logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
 
     user1 = User(name="user1", playlist=playlist1)
     user2 = User(name="user2", playlist=playlist2, friends=[user1])
-    user3 = User(name="user3", playlist=playlist3, friends=[user2])
+    user3 = User(name="user3", playlist=playlist3, friends=[user2, user1])
     user4 = User(name="user4", playlist=playlist1, friends=[user2, user1])
 
     basic_recommender = MusicRecommender(library=library, strategy=BasicRecommenderStrategy())
