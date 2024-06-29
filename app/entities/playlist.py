@@ -20,6 +20,9 @@ class Playlist:
     def add(self, song: Song):
         self.__songs[song.name] = song
 
+    def contains(self, song: Song):
+        return song.name in self.__songs
+
     def remove(self):
         raise NotImplementedError()
 
