@@ -25,5 +25,4 @@ class FriendsPlaylistBasedRecommenderStrategy(RecommenderStrategy):
             recommendations.append((song, song_present_in_friends_list / len(user.friends)))
 
         recommendations.sort(key=lambda x: x[1], reverse=True)
-        print(recommendations)
         return [song for song, score in recommendations if score > 0]
