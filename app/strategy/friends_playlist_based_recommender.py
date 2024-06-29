@@ -20,7 +20,6 @@ class FriendsPlaylistBasedRecommenderStrategy(RecommenderStrategy):
 
             for friend in user.friends:
                 if friend.playlist.contains(song):
-                    logger.info(f"{song.name} found in {friend.name}")
                     song_present_in_friends_list += 1
             recommendations.append((song, song_present_in_friends_list / len(user.friends)))
 

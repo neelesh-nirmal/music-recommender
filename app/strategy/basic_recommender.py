@@ -3,7 +3,7 @@ from app.entities.song import Song
 from app.entities.user import User
 from app.strategy.similarity_calculator import SimilarityCalculator
 from app.strategy.strategy import RecommenderStrategy
-import math
+
 
 class BasicRecommenderStrategy(RecommenderStrategy):
     """
