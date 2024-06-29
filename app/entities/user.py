@@ -3,7 +3,7 @@ from app.entities.playlist import Playlist
 
 class User:
     def __init__(self, name: str, playlist: Playlist = None, friends: list['User'] = None):
-        self.name = name
+        self.name: str = name
         self.__playlist: Playlist | None = playlist
         self.__friends: list['User'] = friends if friends else []
 

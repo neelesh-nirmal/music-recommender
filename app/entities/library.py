@@ -13,6 +13,8 @@ class Library:
         if songs:
             self.__songs = {song.name: song for song in songs}
 
+        logger.info(f"Library {self.__name} created with {len(self.__songs)} songs")
+
     @property
     def songs(self) -> list[Song]:
         return list(self.__songs.values())

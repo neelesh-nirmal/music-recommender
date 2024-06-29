@@ -1,7 +1,7 @@
 from app.entities.library import Library
 from app.entities.song import Song
 from app.entities.user import User
-from app.recommendations.strategy.strategy import RecommenderStrategy
+from app.strategy.strategy import RecommenderStrategy
 
 
 class FriendsPlaylistBasedRecommenderStrategy(RecommenderStrategy):

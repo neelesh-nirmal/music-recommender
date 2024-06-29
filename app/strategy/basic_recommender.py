@@ -3,8 +3,8 @@ from itertools import product
 from app.entities.library import Library
 from app.entities.song import Song
 from app.entities.user import User
-from app.recommendations.strategy import RecommenderStrategy
-from app.recommender import SimilarityCalculator
+from app.strategy.similarity_calculator import SimilarityCalculator
+from app.strategy.strategy import RecommenderStrategy
 
 
 class BasicRecommenderStrategy(RecommenderStrategy):

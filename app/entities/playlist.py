@@ -1,4 +1,8 @@
+import logging
+
 from app.entities.song import Song
+
+logger = logging.getLogger(__name__)
 
 
 class Playlist:
@@ -8,6 +12,8 @@ class Playlist:
         self.__songs: dict[str, Song] = {}
         if not songs:
             self.__songs = {song.name: song for song in songs}
+
+        logger.info(f"Playlist {self.__name} created with {len(songs)} songs")
 
     @property
     def songs(self) -> list[Song]:
@@ -19,6 +25,7 @@ class Playlist:
 
     def add(self, song: Song):
         self.__songs[song.name] = song
+        logger.info(f"Song {song.name} added to the Playlist {self.__name}")
 
     def contains(self, song: Song):
         return song.name in self.__songs
